@@ -73,8 +73,10 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    # Pb same name => same doc!!!
-    'C:/Users/xcpro/ve0/dev0/p3/plot1/static/plot1',
+
+    'C:/Users/xcpro/ve0/dev0/p3/plot1/static', # we don't precise static/plot1 because then we would specify in html js/plot.js in the template=> not specific of an app
+    'C:/Users/xcpro/ve0/dev0/p3/plot2/static', #so we prefer to leave static alone and specify plot1/js/plot.js in the template
+    'C:/Users/xcpro/ve0/dev0/p3/plot3/static',
 )
 
 # List of finder classes that know how to find static files in
@@ -128,6 +130,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'plot1',
+    #'plot2',
+    'plot3',
 
 )
 

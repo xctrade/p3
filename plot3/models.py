@@ -2,14 +2,23 @@
 
 from django.db import models
 
-class Plot1(models.Model):
-	title = models.CharField(max_length=40)
-	x_plot = models.IntegerField()
-	y_plot = models.IntegerField()
+class Animal(models.Model):
+
+	animal_type = models.CharField(max_length=15)
+	number_total =models.IntegerField()
+	number_medical =models.IntegerField()
+	expense =models.IntegerField()
+
+	city = models.ForeignKey('City')
 
 	def __unicode__(self):
-		return self.title
+		return self.animal_type
 
 
+class City(models.Model):
 
-#http://pydoc.net/Python/django-richtemplates/0.3.8/example_project.examples.views.jqplot/
+	city_name = models.CharField(max_length=80)
+
+	def __unicode__(self):
+		return self.city_name
+

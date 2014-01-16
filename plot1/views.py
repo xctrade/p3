@@ -11,3 +11,5 @@ def plot(request):
 	return render (request, 'plot1/plot_page.html', {"graph_data1" : graph_data1,
 													"graph_data2" : graph_data2
 													})
+
+

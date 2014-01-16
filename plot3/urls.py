@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 
 from django.conf.urls import patterns, url
-from plot1 import views
+from plot3 import views
 
 urlpatterns = patterns('',
 
-    url(r'^$', views.plot),
+    url(r'^$', views.barchart1),
 
 )
